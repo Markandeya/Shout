@@ -1,0 +1,14 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule ^([a-zA-Z]*)/?([a-zA-Z]*)?/?([a-zA-Z0-9]*)?/?$ index.php?controller=$1&action=$2&id=$3 [NC,L]
+
+//Password Protect file
+<Files ./views/private>
+AuthName "Prompt"
+AuthType Basic
+AuthUserFile ~/.htpasswd
+Require valid-user
+</Files>
+
+//Custom 404 errors
+ErrorDocument 404 /var/www/html/shout/views/404.html
