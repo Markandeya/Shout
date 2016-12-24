@@ -28,7 +28,7 @@
         if(in_array('Controller', $parents)){
           //Check specified method exists in newController
           if(method_exists($this->controller, $this->action)){
-            return new $this->controller($this->action, $this->request);
+            return new $this->controller($this->action);//, $this->request);
           } else{
             echo '<h1>Method doesn\'t exist</h1>';
             return;
