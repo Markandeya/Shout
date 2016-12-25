@@ -7,9 +7,9 @@
     public function __construct($request){
       //Grab the url controller
       if($request['controller'] == ''){
-         $this->controller = 'home';
+        $this->controller = 'home';
       }else {
-         $this->controller = $request['controller'];
+        $this->controller = $request['controller'];
       }
 
       //Grab the url action
@@ -18,7 +18,6 @@
       }else {
         $this->action = $request['action'];
       }
-      echo 'Bootstrap class created';
     }
     public function createController(){
       //Check newController class exists

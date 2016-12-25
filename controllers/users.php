@@ -1,7 +1,8 @@
 <?php
   class Users extends Controller{
-    protected function index(){
-      echo 'users/index';
+    protected function login(){
+      $viewmodel = new UserModel();//user model object
+      $this->returnView($viewmodel->login(), true);//$viewmodel->index() returns
     }
   }
  ?>
