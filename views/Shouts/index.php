@@ -1,4 +1,6 @@
+<?php if(isset($_SESSION['is_logged_in'])): ?>
 <a href="<?php echo ROOT_URL.'shouts/add'?>" class="btn btn-success btn-custom">Add Shout</a>
+<?php endif; ?>
 <?php foreach($viewmodel as $shouts){ ?>
   <div class="well">
     <h3><?php echo $shouts['title'] ?><i><small class="primary">&nbsp Created at <?php echo $shouts['create_date']?></small></i></h3>
