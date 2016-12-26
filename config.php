@@ -1,8 +1,8 @@
 <?php
   //Define DB params
   define('DB_HOST', 'localhost');
-  define('DB_USER', 'root');
-  define('DB_PASS', 'guruaum');
+  define('DB_USER', '');//db username
+  define('DB_PASS', '');//db password
   define('DB_NAME', 'shout');
 
   //Define url
