@@ -1,5 +1,8 @@
 <?php
+session_start();
   require 'config.php';
+
+  require 'classes/Messages.php';
   require 'classes/Bootstrap.php';
   require 'classes/Controller.php';
 
@@ -12,9 +15,11 @@
   require 'models/shouts.php';
   require 'models/users.php';
 
+
   $bootstrap = new Bootstrap($_GET);
   $controller = $bootstrap->createController();//for example home.php
   if($controller){
     echo $controller->executeAction();//for example home->index()
   }
  ?>
+<link rel="stylesheet" href='assets/css/style.css'/>
